@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Vimix-dark-jade
+Comment=Clean Gtk+ theme based on Material Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Vimix-dark-jade
+MetacityTheme=Vimix-dark-jade
+IconTheme=Vimix-jade-dark
+CursorTheme=Vimix-jade-dark
+ButtonLayout=menu:minimize,maximize,close

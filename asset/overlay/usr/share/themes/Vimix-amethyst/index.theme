@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Vimix-amethyst
+Comment=Clean Gtk+ theme based on Material Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Vimix-amethyst
+MetacityTheme=Vimix-amethyst
+IconTheme=Vimix-amethyst
+CursorTheme=Vimix-amethyst
+ButtonLayout=menu:minimize,maximize,close

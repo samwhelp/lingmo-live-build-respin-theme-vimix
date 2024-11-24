@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Vimix-light-grey
+Comment=Clean Gtk+ theme based on Material Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Vimix-light-grey
+MetacityTheme=Vimix-light-grey
+IconTheme=Vimix-grey-light
+CursorTheme=Vimix-grey-light
+ButtonLayout=menu:minimize,maximize,close
