@@ -18,4 +18,9 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 
+
+gtk-enable-animations=1
+gtk-primary-button-warps-slider=0
+
+
 # include "/home/user/.gtkrc-2.0.mine"
