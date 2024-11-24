@@ -1,0 +1,68 @@
+
+[Alt%2BShift%2BL]
+Comment=Lock
+Exec=lingmo-screenlocker
+
+[Alt%2BShift%2BX]
+Comment=Leave
+Exec=lingmo-shutdown
+
+[Alt%2BShift%2BS]
+Comment=System Settings
+Exec=lingmo-settings
+
+[Alt%2BF1]
+Comment=App Launcher
+Exec=lingmo-launcher
+
+[Meta%2BSpace]
+Comment=App Launcher
+Exec=lingmo-launcher
+
+[Alt%2BShift%2BT]
+Comment=Terminal
+Exec=lingmo-terminal
+
+[Alt%2BCtrl%2BT]
+Comment=Terminal
+Exec=qterminal
+
+[Alt%2BReturn]
+Comment=Terminal
+Exec=sakura
+
+[Alt%2BShift%2BA]
+Comment=Terminal
+Exec=sakura
+
+[Alt%2BCtrl%2BA]
+Comment=Terminal
+Exec=xfce4-terminal
+
+[Alt%2BShift%2BF]
+Comment=File Manager
+Exec=pcmanfm-qt
+
+[Alt%2BShift%2BG]
+Comment=File Manager
+Exec=thunar
+
+[Alt%2BShift%2BE]
+Comment=Text Editor
+Exec=lingmo-texteditor
+
+[Alt%2BShift%2BB]
+Comment=Web Browser
+Exec=firefox --new-tab about:blank
+
+[Alt%2BShift%2BR]
+Comment=Rofi Show Run
+Exec=rofi -show run
+
+[Alt%2BShift%2BD]
+Comment=Rofi Show Drun
+Exec=rofi -show drun -show-icons
+
+[Alt%2BShift%2BW]
+Comment=Rofi Show Window
+Exec=rofi -show window -show-icons
