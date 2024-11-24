@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Lingmo Leave
+Name[zh_CN]=文件管理器
+GenericName=Logout
+Comment=Lingmo Leave
+Exec=lingmo-shutdown
+Icon=system
+Categories=System;
+StartupNotify=true
+Terminal=false
