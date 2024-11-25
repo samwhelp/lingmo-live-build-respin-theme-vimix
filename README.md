@@ -87,6 +87,8 @@ or run
 | vinceliuice / [Vimix-gtk-themes](https://github.com/vinceliuice/Vimix-gtk-themes) |
 | yeyushengfan258 / [Citrus-icon-theme](https://github.com/yeyushengfan258/Citrus-icon-theme) |
 
+> [Config Sample](https://github.com/samwhelp/lingmo-adjustment/tree/main/prototype/main/style-config/switch/Vimix/Vimix-Dark-with-icon-Citrus-Dark-Red/asset/overlay/etc/skel)
+
 
 
 
