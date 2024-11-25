@@ -12,3 +12,13 @@
 ##
 
 variety
+
+
+
+
+##
+## > install `qdbus-qt5` for using variety on lingmo
+##
+
+qdbus-qt5
+#qdbus-qt6
