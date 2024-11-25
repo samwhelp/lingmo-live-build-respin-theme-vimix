@@ -11,6 +11,7 @@
 
 * [Project](#project)
 * [Usage](#usage)
+* [Theme Source](theme-source)
 * [Link](#link)
 
 
@@ -74,6 +75,17 @@ or run
 ``` sh
 ./build.sh
 ```
+
+
+
+
+## Theme Source
+
+| Theme Source |
+| ------------ |
+| vinceliuice / [Vimix-kde](https://github.com/vinceliuice/Vimix-kde) |
+| vinceliuice / [Vimix-gtk-themes](https://github.com/vinceliuice/Vimix-gtk-themes) |
+| yeyushengfan258 / [Citrus-icon-theme](https://github.com/yeyushengfan258/Citrus-icon-theme) |
 
 
 
