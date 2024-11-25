@@ -2,7 +2,7 @@
 
 # Home
 
-> lingmo-live-build-respin-theme-vimix
+> [lingmo-live-build-respin-theme-vimix](https://github.com/samwhelp/lingmo-live-build-respin-theme-vimix)
 
 
 
