@@ -1,10 +1,10 @@
 
 
-# lingmo-live-build-respin-theme-vimix-main
+# lingmo-live-build-respin-theme-vimix
 
 | Link | GitHub |
 | ---- | ------ |
-| [lingmo-live-build-respin-theme-vimix-main](https://samwhelp.github.io/lingmo-live-build-respin-theme-vimix-main/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-respin-theme-vimix-main) |
+| [lingmo-live-build-respin-theme-vimix](https://samwhelp.github.io/lingmo-live-build-respin-theme-vimix/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-respin-theme-vimix) |
 | [lingmo-live-build-config-enhance](https://samwhelp.github.io/lingmo-live-build-config-enhance/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-config-enhance) |
 | [Lingmo OS / Adjustment](https://samwhelp.github.io/lingmo-adjustment/) | [GitHub](https://github.com/samwhelp/lingmo-adjustment) |
 
