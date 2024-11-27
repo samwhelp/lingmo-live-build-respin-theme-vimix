@@ -3,6 +3,10 @@
 Comment=Lock
 Exec=lingmo-screenlocker
 
+[Alt%2BShift%2BZ]
+Comment=Leave
+Exec=lingmo-shutdown
+
 [Alt%2BShift%2BX]
 Comment=Leave
 Exec=lingmo-shutdown
@@ -49,7 +53,7 @@ Exec=thunar
 
 [Alt%2BShift%2BE]
 Comment=Text Editor
-Exec=lingmo-texteditor
+Exec=featherpad
 
 [Alt%2BShift%2BB]
 Comment=Web Browser
