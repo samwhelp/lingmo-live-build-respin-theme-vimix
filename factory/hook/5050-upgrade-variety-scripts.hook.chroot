@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+
+
+
+##
+## ## Upgrade Variety Scripts
+##
+
+REF_SOURCE_VARIETY_SCRIPTS=/etc/skel/.config/variety/scripts
+REF_TARGET_VARIETY_SCRIPTS=/usr/share/variety/scripts
+
+
+if [ ! -d  "${REF_SOURCE_VARIETY_SCRIPTS}" ]; then
+	#echo "Source Dir Not Exists: ${REF_SOURCE_VARIETY_SCRIPTS}"
+	exit
+fi
+
+
+mkdir -p "${REF_TARGET_VARIETY_SCRIPTS}"
+
+## copy `variety scripts` to support `Lingmo OS`
+cp -rf "${REF_SOURCE_VARIETY_SCRIPTS}/." "${REF_TARGET_VARIETY_SCRIPTS}"
