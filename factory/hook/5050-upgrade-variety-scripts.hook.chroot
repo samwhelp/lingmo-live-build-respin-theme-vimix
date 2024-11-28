@@ -21,5 +21,12 @@ fi
 
 mkdir -p "${REF_TARGET_VARIETY_SCRIPTS}"
 
-## copy `variety scripts` to support `Lingmo OS`
-cp -rf "${REF_SOURCE_VARIETY_SCRIPTS}/." "${REF_TARGET_VARIETY_SCRIPTS}"
+##
+## > copy `variety scripts` to support `Lingmo OS`
+##
+
+echo
+echo "I:" cp -rfvT "${REF_SOURCE_VARIETY_SCRIPTS}" "${REF_TARGET_VARIETY_SCRIPTS}"
+echo
+cp -rfvT "${REF_SOURCE_VARIETY_SCRIPTS}" "${REF_TARGET_VARIETY_SCRIPTS}"
+echo
