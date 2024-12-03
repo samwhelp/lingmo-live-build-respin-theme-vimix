@@ -44,7 +44,6 @@
 | Link | GitHub |
 | ---- | ------ |
 | [lingmo-live-build-respin-theme-lingmo-icon-citrus](https://samwhelp.github.io/lingmo-live-build-respin-theme-lingmo-icon-citrus/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-respin-theme-lingmo-icon-citrus) |
-| [lingmo-live-build-respin-theme-lingmo-icon-oneui](https://samwhelp.github.io/lingmo-live-build-respin-theme-lingmo-icon-oneui/) | [GitHub](https://github.com/samwhelp/lingmo-live-build-respin-theme-lingmo-icon-oneui) |
 
 
 | Link | GitHub |
