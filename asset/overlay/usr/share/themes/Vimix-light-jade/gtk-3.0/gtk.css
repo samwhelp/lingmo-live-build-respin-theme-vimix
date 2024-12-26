@@ -283,6 +283,33 @@ notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), popover.ba
   opacity: 1;
 }
 
+entry.cell {
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+  border-image: none;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+entry.cell:focus {
+  border: 1px solid #86BE43;
+  box-shadow: none;
+  border-image: none;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+entry.cell:disabled {
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+  border-image: none;
+  background-color: #f9f9f9;
+  color: rgba(0, 0, 0, 0.38);
+  opacity: 1;
+}
+
 entry {
   transition: all 100ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border: none;
@@ -499,16 +526,16 @@ entry progress {
   border-radius: 0;
 }
 
-treeview entry.flat, treeview entry {
+treeview.view entry.flat, treeview.view entry {
   min-height: 0;
-  padding: 2px;
+  padding: 0;
   border-radius: 3px;
-  background-color: #FFFFFF;
 }
 
-treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:focus {
+treeview.view entry.flat, treeview.view entry.flat:focus, treeview.view entry, treeview.view entry:focus {
   border-image: none;
   box-shadow: none;
+  background-color: #FFFFFF;
 }
 
 @keyframes needs_attention {
@@ -1830,6 +1857,11 @@ headerbar.default-decoration button.titlebutton {
   margin: 0;
   padding: 0;
   transition: 100ms;
+  background-size: 16px 16px;
+}
+
+headerbar.default-decoration button.titlebutton:hover, headerbar.default-decoration button.titlebutton:active {
+  background-size: 22px 22px;
 }
 
 headerbar.default-decoration, .csd headerbar.default-decoration, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop {
@@ -4273,10 +4305,224 @@ messagedialog.csd decoration {
   font-family: monospace;
 }
 
+window.background.chromium headerbar.titlebar button.titlebutton, headerbar:not(.default-decoration) button.titlebutton.close, headerbar:not(.default-decoration) button.titlebutton.maximize, headerbar:not(.default-decoration) button.titlebutton.minimize, headerbar button.titlebutton.close,
+.titlebar button.titlebutton.close, headerbar button.titlebutton.maximize,
+.titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.minimize {
+  margin: 0;
+  padding: 0;
+  min-width: 26px;
+  min-height: 26px;
+  animation: none;
+  box-shadow: none;
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton:hover, headerbar button.titlebutton.close:hover,
+.titlebar button.titlebutton.close:hover, headerbar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.maximize:hover, headerbar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.minimize:hover, window.background.chromium headerbar.titlebar button.titlebutton:active, headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active, headerbar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.maximize:active, headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.minimize:active, window.background.chromium headerbar.titlebar button.titlebutton:checked, headerbar button.titlebutton.close:checked,
+.titlebar button.titlebutton.close:checked, headerbar button.titlebutton.maximize:checked,
+.titlebar button.titlebutton.maximize:checked, headerbar button.titlebutton.minimize:checked,
+.titlebar button.titlebutton.minimize:checked {
+  box-shadow: none;
+  border: none;
+  color: transparent;
+  animation: none;
+  transition: background-size 100ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: transparent;
+  background-size: 22px 22px;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton:backdrop, headerbar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.close:backdrop, headerbar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.maximize:backdrop, headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop {
+  opacity: 1;
+  color: transparent;
+}
+
+headerbar button.titlebutton:hover,
+.titlebar button.titlebutton:hover {
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
+  animation: none;
+  box-shadow: inset 0 0 0 9999px rgba(134, 190, 67, 0.3);
+  background-image: radial-gradient(circle farthest-corner at center, rgba(134, 190, 67, 0.3) 10%, transparent 0%);
+  background-size: 0% 0%;
+  color: #86BE43;
+}
+
+headerbar button.titlebutton:active,
+.titlebar button.titlebutton:active, headerbar button.titlebutton:checked,
+.titlebar button.titlebutton:checked {
+  transition: all 100ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
+  animation: ripple_effect 100ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  box-shadow: inset 0 0 0 9999px #86BE43;
+  background-image: radial-gradient(circle farthest-corner at center, #86BE43 10%, transparent 0%);
+  background-size: 0% 0%;
+  color: white;
+}
+
 headerbar button.titlebutton.close,
 .titlebar button.titlebutton.close {
-  border-radius: 3px;
-  -gtk-outline-radius: 3px;
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close.png"), url("assets/window-assets/titlebutton-close@2.png"));
+}
+
+headerbar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-backdrop.png"), url("assets/window-assets/titlebutton-close-backdrop@2.png"));
+}
+
+headerbar button.titlebutton.close:hover,
+.titlebar button.titlebutton.close:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-hover.png"), url("assets/window-assets/titlebutton-close-hover@2.png"));
+}
+
+headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-active.png"), url("assets/window-assets/titlebutton-close-active@2.png"));
+}
+
+headerbar button.titlebutton.maximize,
+.titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize.png"), url("assets/window-assets/titlebutton-maximize@2.png"));
+}
+
+headerbar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-backdrop.png"), url("assets/window-assets/titlebutton-maximize-backdrop@2.png"));
+}
+
+headerbar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-hover.png"), url("assets/window-assets/titlebutton-maximize-hover@2.png"));
+}
+
+headerbar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-active.png"), url("assets/window-assets/titlebutton-maximize-active@2.png"));
+}
+
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize.png"), url("assets/window-assets/titlebutton-minimize@2.png"));
+}
+
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-backdrop.png"), url("assets/window-assets/titlebutton-minimize-backdrop@2.png"));
+}
+
+headerbar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-hover.png"), url("assets/window-assets/titlebutton-minimize-hover@2.png"));
+}
+
+headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-active.png"), url("assets/window-assets/titlebutton-minimize-active@2.png"));
+}
+
+.fullscreen headerbar button.titlebutton.maximize,
+.fullscreen .titlebar button.titlebutton.maximize, .maximized headerbar button.titlebutton.maximize,
+.maximized .titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore.png"), url("assets/window-assets/titlebutton-restore@2.png"));
+}
+
+.fullscreen headerbar button.titlebutton.maximize:backdrop,
+.fullscreen .titlebar button.titlebutton.maximize:backdrop, .maximized headerbar button.titlebutton.maximize:backdrop,
+.maximized .titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-backdrop.png"), url("assets/window-assets/titlebutton-restore-backdrop@2.png"));
+}
+
+.fullscreen headerbar button.titlebutton.maximize:hover,
+.fullscreen .titlebar button.titlebutton.maximize:hover, .maximized headerbar button.titlebutton.maximize:hover,
+.maximized .titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-hover.png"), url("assets/window-assets/titlebutton-restore-hover@2.png"));
+}
+
+.fullscreen headerbar button.titlebutton.maximize:active,
+.fullscreen .titlebar button.titlebutton.maximize:active, .maximized headerbar button.titlebutton.maximize:active,
+.maximized .titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-active.png"), url("assets/window-assets/titlebutton-restore-active@2.png"));
+}
+
+headerbar > box.right, headerbar > box.left,
+.titlebar > box.right,
+.titlebar > box.left {
+  padding: 0 6px;
+}
+
+headerbar:not(.default-decoration) button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close.png"), url("assets/window-assets/titlebutton-close@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-backdrop.png"), url("assets/window-assets/titlebutton-close-backdrop@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.close:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-hover.png"), url("assets/window-assets/titlebutton-close-hover@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.close:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-active.png"), url("assets/window-assets/titlebutton-close-active@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize.png"), url("assets/window-assets/titlebutton-maximize@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-backdrop.png"), url("assets/window-assets/titlebutton-maximize-backdrop@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-hover.png"), url("assets/window-assets/titlebutton-maximize-hover@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-active.png"), url("assets/window-assets/titlebutton-maximize-active@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize.png"), url("assets/window-assets/titlebutton-minimize@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-backdrop.png"), url("assets/window-assets/titlebutton-minimize-backdrop@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-hover.png"), url("assets/window-assets/titlebutton-minimize-hover@2.png"));
+}
+
+headerbar:not(.default-decoration) button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-active.png"), url("assets/window-assets/titlebutton-minimize-active@2.png"));
+}
+
+.maximized headerbar:not(.default-decoration) button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore.png"), url("assets/window-assets/titlebutton-restore@2.png"));
+}
+
+.maximized headerbar:not(.default-decoration) button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-backdrop.png"), url("assets/window-assets/titlebutton-restore-backdrop@2.png"));
+}
+
+.maximized headerbar:not(.default-decoration) button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-hover.png"), url("assets/window-assets/titlebutton-restore-hover@2.png"));
+}
+
+.maximized headerbar:not(.default-decoration) button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-active.png"), url("assets/window-assets/titlebutton-restore-active@2.png"));
 }
 
 cursor-handle {
@@ -6125,8 +6371,6 @@ window.background.chromium headerbar.titlebar button.toggle {
 
 window.background.chromium headerbar.titlebar button.titlebutton {
   border: none;
-  background-image: none;
-  background-color: transparent;
 }
 
 window.background.chromium button {
@@ -6464,7 +6708,7 @@ widget > box.terminal-titlebar > button.image-button, widget > box.terminal-titl
 }
 
 .xfce4-panel.background {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f2f2;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 700;
   text-shadow: none;
@@ -6477,7 +6721,7 @@ widget > box.terminal-titlebar > button.image-button, widget > box.terminal-titl
 }
 
 .xfce4-panel.background#XfcePanelWindow {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #f2f2f2;
 }
 
 .xfce4-panel.background#XfcePanelWindow, .xfce4-panel.background#XfcePanelWindow.marching-ants {
@@ -6625,6 +6869,10 @@ menubar.-vala-panel-background > menuitem check:not(:checked):not(:indeterminate
 
 .nemo-window .nemo-places-sidebar.frame {
   border-width: 0;
+}
+
+.nemo-window .nemo-places-sidebar treeview.view.places-treeview {
+  padding: 3px 0;
 }
 
 .nemo-window notebook {
@@ -6843,8 +7091,8 @@ UnityDecoration.menubar .menuitem *:hover {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: rgba(255, 255, 255, 0.5);
-  background-image: image(rgba(255, 255, 255, 0.5));
+  background-color: #f2f2f2;
+  background-image: image(#f2f2f2);
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -7622,13 +7870,13 @@ window.budgie-popover:not(.csd) > frame.container > border {
 
 .budgie-panel {
   transition: background-color 100ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f2f2;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(242, 242, 242, 0.85);
 }
 
 .budgie-panel button {

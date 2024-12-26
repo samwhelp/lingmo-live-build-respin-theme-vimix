@@ -2407,6 +2407,11 @@ headerbar.default-decoration {
 
 headerbar.default-decoration windowcontrols button {
   transition: 100ms;
+  background-size: 16px 16px;
+}
+
+headerbar.default-decoration windowcontrols button:hover, headerbar.default-decoration windowcontrols button:active {
+  background-size: 22px 22px;
 }
 
 headerbar.default-decoration windowcontrols button, headerbar.default-decoration windowcontrols menubutton {
@@ -4490,23 +4495,23 @@ separator.sidebar {
   background: none;
 }
 
-list.content > row:not(:last-child), list.content > row.expander row.header:not(:last-child),
 list.boxed-list > row.expander row.header:not(:last-child), row.expander list.nested > row:not(:last-child), listview.boxed-list > row.expander list > row:not(:last-child),
 list.boxed-list > row.expander list > row:not(:last-child), listview.content:not(.conversation-listbox) > row:not(:last-child), listview.boxed-list > row:not(:last-child),
+list.content:not(.conversation-listbox) > row:not(:last-child),
 list.boxed-list > row:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-list.content > row:first-child, list.content > row.expander row.header:first-child,
 list.boxed-list > row.expander row.header:first-child, row.expander list.nested > row:first-child, listview.boxed-list > row.expander list > row:first-child,
 list.boxed-list > row.expander list > row:first-child, listview.content:not(.conversation-listbox) > row:first-child, listview.boxed-list > row:first-child,
+list.content:not(.conversation-listbox) > row:first-child,
 list.boxed-list > row:first-child {
   border-radius: 2px 2px 0 0;
 }
 
-list.content > row:last-child, list.content > row.expander row.header:last-child,
 list.boxed-list > row.expander row.header:last-child, row.expander list.nested > row:last-child, listview.boxed-list > row.expander list > row:last-child,
 list.boxed-list > row.expander list > row:last-child, listview.content:not(.conversation-listbox) > row:last-child, listview.boxed-list > row:last-child,
+list.content:not(.conversation-listbox) > row:last-child,
 list.boxed-list > row:last-child {
   border-radius: 0 0 2px 2px;
 }
@@ -4624,6 +4629,14 @@ row:selected:hover {
   background-color: #5a95f5;
 }
 
+row.spin spinbutton {
+  min-height: 0;
+}
+
+row.spin spinbutton > button {
+  margin: 0;
+}
+
 row.combo image.dropdown-arrow:disabled {
   filter: opacity(0.35);
 }
@@ -4696,24 +4709,20 @@ row.expander:checked image.expander-row-arrow:not(:disabled) {
   color: inherit;
 }
 
-list.content > row.expander,
+list.boxed-list > .dim-label, list.boxed-list > label.separator, row list.boxed-list > label.subtitle, row.expander list.boxed-list > image.expander-row-arrow {
+  padding: 18px;
+}
+
 list.boxed-list > row.expander {
   border: none;
 }
 
-list.content > row:first-child, list.content > row:first-child.expander row.header,
-list.boxed-list > row:first-child,
-list.boxed-list > row:first-child.expander row.header {
+list.boxed-list > row:first-child, list.boxed-list > row:first-child.expander row.header {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
 
-list.content > row:last-child, list.content > row:last-child.expander:not(:checked), list.content > row:last-child.expander:not(:checked) row.header, list.content > row:last-child.expander:checked list.nested, list.content > row:last-child.expander:checked list.nested > row:last-child,
-list.boxed-list > row:last-child,
-list.boxed-list > row:last-child.expander:not(:checked),
-list.boxed-list > row:last-child.expander:not(:checked) row.header,
-list.boxed-list > row:last-child.expander:checked list.nested,
-list.boxed-list > row:last-child.expander:checked list.nested > row:last-child {
+list.boxed-list > row:last-child, list.boxed-list > row:last-child.expander:not(:checked), list.boxed-list > row:last-child.expander:not(:checked) row.header, list.boxed-list > row:last-child.expander:checked list.nested, list.boxed-list > row:last-child.expander:checked list.nested > row:last-child {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-width: 0;
@@ -5515,6 +5524,18 @@ scrolledwindow.undershoot-end:dir(rtl) > undershoot.left {
   filder: none;
 }
 
+.bottom-bar {
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
+  background-color: #F2F2F2;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.bottom-bar actionbar > revealer > box {
+  box-shadow: none;
+  border-top: none;
+  background: none;
+}
+
 floating-sheet > dimming {
   background-color: rgba(0, 0, 0, 0.35);
 }
@@ -6136,15 +6157,17 @@ combobox popover listview > row:disabled:selected, row:disabled:selected, column
 }
 
 headerbar windowcontrols {
-  border-spacing: 9px;
+  border-spacing: 6px;
 }
 
 headerbar windowcontrols:not(.empty).start:dir(ltr), headerbar windowcontrols:not(.empty).end:dir(rtl) {
   margin-right: 9px;
+  margin-left: 6px;
 }
 
 headerbar windowcontrols:not(.empty).start:dir(rtl), headerbar windowcontrols:not(.empty).end:dir(ltr) {
   margin-left: 9px;
+  margin-right: 6px;
 }
 
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action) image {
@@ -6159,8 +6182,98 @@ headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action
   background-color: transparent;
 }
 
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize {
+  margin: 0;
+  padding: 0;
+  min-width: 26px;
+  min-height: 26px;
+  animation: none;
+  box-shadow: none;
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:checked, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:checked, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:checked {
+  box-shadow: none;
+  border: none;
+  color: transparent;
+  animation: none;
+  transition: background-size 100ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: transparent;
+  background-size: 22px 22px;
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:backdrop, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:backdrop, headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:backdrop {
+  opacity: 1;
+  color: transparent;
+}
+
 headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close {
-  border-radius: 3px;
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close.png"), url("assets/window-assets/titlebutton-close@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-backdrop.png"), url("assets/window-assets/titlebutton-close-backdrop@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-hover.png"), url("assets/window-assets/titlebutton-close-hover@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).close:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-close-active.png"), url("assets/window-assets/titlebutton-close-active@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize.png"), url("assets/window-assets/titlebutton-maximize@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-backdrop.png"), url("assets/window-assets/titlebutton-maximize-backdrop@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-hover.png"), url("assets/window-assets/titlebutton-maximize-hover@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-maximize-active.png"), url("assets/window-assets/titlebutton-maximize-active@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize.png"), url("assets/window-assets/titlebutton-minimize@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-backdrop.png"), url("assets/window-assets/titlebutton-minimize-backdrop@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-hover.png"), url("assets/window-assets/titlebutton-minimize-hover@2.png"));
+}
+
+headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).minimize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-minimize-active.png"), url("assets/window-assets/titlebutton-minimize-active@2.png"));
+}
+
+.maximized headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore.png"), url("assets/window-assets/titlebutton-restore@2.png"));
+}
+
+.maximized headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-backdrop.png"), url("assets/window-assets/titlebutton-restore-backdrop@2.png"));
+}
+
+.maximized headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:hover {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-hover.png"), url("assets/window-assets/titlebutton-restore-hover@2.png"));
+}
+
+.maximized headerbar windowcontrols > button:not(.suggested-action):not(.destructive-action).maximize:active {
+  background-image: -gtk-scaled(url("assets/window-assets/titlebutton-restore-active.png"), url("assets/window-assets/titlebutton-restore-active@2.png"));
 }
 
 cursor-handle {

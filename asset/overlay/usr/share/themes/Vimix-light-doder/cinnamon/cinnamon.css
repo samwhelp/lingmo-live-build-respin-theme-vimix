@@ -493,7 +493,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 28px;
   width: 32px;
   color: rgba(0, 0, 0, 0.6);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f2f2;
   font-weight: 700;
 }
 
@@ -578,7 +578,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .panel-dummy {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(242, 242, 242, 0.4);
 }
 
 .panel-dummy:entered {
@@ -673,7 +673,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .panel-corner, .panel-corner:active, .panel-corner:overview, .panel-corner:focus {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(255, 255, 255, 0.5);
+  -panel-corner-background-color: #f2f2f2;
   -panel-corner-inner-border-width: 0;
   -panel-corner-inner-border-color: transparent;
   -panel-corner-outer-border-width: 0;
@@ -1451,7 +1451,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #keyboard {
   border-width: 0;
-  background-color: rgba(255, 255, 255, 0.54);
+  background-color: rgba(242, 242, 242, 0.54);
 }
 
 .keyboard-layout {
@@ -1492,7 +1492,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .keyboard-key:grayed {
   color: rgba(255, 255, 255, 0.45);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f2f2;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1770,7 +1770,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 0 none transparent;
   border-image: none;
   background-image: none;
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(242, 242, 242, 0.01);
   color: rgba(0, 0, 0, 0.6);
   box-shadow: none;
   font-weight: 400;
@@ -1950,7 +1950,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 0 none transparent;
   border-image: none;
   background-image: none;
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(242, 242, 242, 0.01);
   color: rgba(0, 0, 0, 0.6);
   box-shadow: none;
   font-weight: 400;
